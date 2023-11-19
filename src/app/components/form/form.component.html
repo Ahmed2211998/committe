@@ -1,0 +1,279 @@
+<!-- <p>form works!</p> -->
+<div class="fillForm pe-5">
+  <div class="container">
+    <section>
+      <div class="title mb-2">
+        <h3 class="mb-1 pt-2">انشاء لجنة جديدة</h3>
+        <img src="./assets/close.svg" alt="close" class="close" />
+      </div>
+
+      <div class="boxes mb-1">
+        <div class="right-box">
+          <img src="./assets/Outline-1.svg" alt="" class="text-center" />
+          <p>بيانات اللجنة</p>
+        </div>
+        <div class="left-box">
+          <img src="./assets/Outline-1.svg" alt="" class="text-center" />
+          <p>اعضاء اللجنة</p>
+        </div>
+      </div>
+
+      <h5 class="info">ادخل بيانات اللجنة</h5>
+      <form [formGroup]="addNewcommites">
+        <div class="form">
+          <div class="row">
+            <div class="col-md">
+              <label for="Scopeofthecommittee">نطاق اللجنة</label>
+              <select class="form-select" aria-label="Default select example" formControlName="Scopeofthecommittee">
+                <option selected>نطاقات</option>
+                <option value="دولية">دولية</option>
+                <option value="محلية">محلية</option>
+              </select>
+              <div *ngIf="
+                  addNewcommites.get('Scopeofthecommittee')?.touched &&
+                  addNewcommites.get('Scopeofthecommittee')?.errors
+                " class="alert alert-danger" role="alert">
+                <p *ngIf="
+                    addNewcommites
+                      .get('Scopeofthecommittee')
+                      ?.getError('required')
+                  ">
+                  Scopeofthecommittee Is required
+                </p>
+
+                <p *ngIf="
+                    addNewcommites
+                      .get('Scopeofthecommittee')
+                      ?.getError('minlength')
+                  ">
+                  Scopeofthecommittee Is minlength 3
+                </p>
+
+                <p *ngIf="
+                    addNewcommites
+                      .get('Scopeofthecommittee')
+                      ?.getError('maxlength')
+                  ">
+                  Scopeofthecommittee Is maxlength 20
+                </p>
+              </div>
+            </div>
+            <div class="col">
+              <label for="Theadministrationconcerned"> الادارة المعنية</label>
+              <input type="text" class="form-control" placeholder="اكتب هنا ..." aria-label="Last name"
+                formControlName="Theadministrationconcerned" />
+              <div *ngIf="
+                  addNewcommites.get('Theadministrationconcerned')?.touched &&
+                  addNewcommites.get('Theadministrationconcerned')?.errors
+                " class="alert alert-danger" role="alert">
+                <p *ngIf="
+                    addNewcommites
+                      .get('Theadministrationconcerned')
+                      ?.getError('required')
+                  ">
+                  Theadministrationconcerned Is required
+                </p>
+
+                <p *ngIf="
+                    addNewcommites
+                      .get('Theadministrationconcerned')
+                      ?.getError('minlength')
+                  ">
+                  Theadministrationconcerned Is minlength 3
+                </p>
+
+                <p *ngIf="
+                    addNewcommites
+                      .get('Theadministrationconcerned')
+                      ?.getError('maxlength')
+                  ">
+                  Theadministrationconcerned Is maxlength 10
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-3 mb-2">
+            <div class="col-sm-6">
+              <label for="City">تصنيف اللجنة</label>
+              <input type="text" class="form-control" placeholder="اكتب هنا..." aria-label="City"
+                formControlName="City" />
+              <div *ngIf="
+                  addNewcommites.get('City')?.touched &&
+                  addNewcommites.get('City')?.errors
+                " class="alert alert-danger" role="alert">
+                <p *ngIf="addNewcommites.get('City')?.getError('required')">
+                  City Is required
+                </p>
+
+                <p *ngIf="addNewcommites.get('City')?.getError('minlength')">
+                  City Is minlength 3
+                </p>
+
+                <p *ngIf="addNewcommites.get('City')?.getError('maxlength')">
+                  City Is maxlength 10
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <label for="datastart">تاريخ التشكبل</label>
+              <input type="number" class="form-control" placeholder="تاريخ التشكبل" aria-label="State"
+                formControlName="datastart" />
+              <div *ngIf="
+                  addNewcommites.get('datastart')?.touched &&
+                  addNewcommites.get('datastart')?.errors
+                " class="alert alert-danger" role="alert">
+                <p *ngIf="addNewcommites.get('datastart')?.getError('required')">
+                  datastart Is required
+                </p>
+
+                <p *ngIf="addNewcommites.get('datastart')?.getError('minlength')">
+                  datastart Is minlength 3
+                </p>
+
+                <p *ngIf="addNewcommites.get('datastart')?.getError('maxlength')">
+                  datastart Is maxlength 10
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <label for="dataend"> تاريخ الانتهاء</label>
+              <input type="number" class="form-control" placeholder=" تاريخ الانتهاء" formControlName="dataend"
+                aria-label="Zip" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md">
+              <label for="Typeofcommittee">نوع اللجنة</label>
+              <select class="form-select" aria-label="Default select example" formControlName="Typeofcommittee"
+                placeholder="اكتب هنا ...">
+                <option selected>محلية</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+              <div *ngIf="
+                  addNewcommites.get('Typeofcommittee')?.touched &&
+                  addNewcommites.get('Typeofcommittee')?.errors
+                " class="alert alert-danger" role="alert">
+                <p *ngIf="
+                    addNewcommites.get('Typeofcommittee')?.getError('required')
+                  ">
+                  Typeofcommittee Is required
+                </p>
+
+                <p *ngIf="
+                    addNewcommites.get('Typeofcommittee')?.getError('minlength')
+                  ">
+                  Typeofcommittee Is minlength 3
+                </p>
+
+                <p *ngIf="
+                    addNewcommites.get('Typeofcommittee')?.getError('maxlength')
+                  ">
+                  Typeofcommittee Is maxlength 10
+                </p>
+              </div>
+            </div>
+            <div class="col">
+              <label for="Generalpurposeofthecommittee">الغرض العام</label>
+              <input type="text" class="form-control" placeholder="الغرض العام من اللجنة..."
+                formControlName="Generalpurposeofthecommittee" aria-label="Last name" />
+              <div *ngIf="
+                  addNewcommites.get('numbercommittee')?.touched &&
+                  addNewcommites.get('numbercommittee')?.errors
+                " class="alert alert-danger" role="alert">
+                <p *ngIf="
+                    addNewcommites
+                      .get('Generalpurposeofthecommittee')
+                      ?.getError('required')
+                  ">
+                  Generalpurposeofthecommittee Is required
+                </p>
+
+                <p *ngIf="
+                    addNewcommites
+                      .get('Generalpurposeofthecommittee')
+                      ?.getError('minlength')
+                  ">
+                  Generalpurposeofthecommittee Is minlength 3
+                </p>
+
+                <p *ngIf="
+                    addNewcommites
+                      .get('Generalpurposeofthecommittee')
+                      ?.getError('maxlength')
+                  ">
+                  Generalpurposeofthecommittee Is maxlength 10
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col">
+              <label for="numbercommittee">رقم الاقرار</label>
+              <input type="number" class="form-control" placeholder="اكتب هنا ..." formControlName="numbercommittee"
+                aria-label="First name" />
+              <div *ngIf="
+                  addNewcommites.get('numbercommittee')?.touched &&
+                  addNewcommites.get('numbercommittee')?.errors
+                " class="alert alert-danger" role="alert">
+                <p *ngIf="
+                    addNewcommites.get('numbercommittee')?.getError('required')
+                  ">
+                  numbercommittee Is required
+                </p>
+
+                <p *ngIf="
+                    addNewcommites.get('numbercommittee')?.getError('minlength')
+                  ">
+                  numbercommittee Is minlength 3
+                </p>
+
+                <p *ngIf="
+                    addNewcommites.get('numbercommittee')?.getError('maxlength')
+                  ">
+                  numbercommittee Is maxlength 10
+                </p>
+              </div>
+            </div>
+
+            <div class="col">
+              <label for="namecommittee"> اسم اللجنة</label>
+              <input type="text" class="form-control" placeholder="اكتب هنا ..." formControlName="name"
+                aria-label="Last name" />
+              <div *ngIf="
+                  addNewcommites.get('name')?.touched &&
+                  addNewcommites.get('name')?.errors
+                " class="alert alert-danger" role="alert">
+                <p *ngIf="addNewcommites.get('name')?.getError('required')">
+                  name Is required
+                </p>
+
+                <p *ngIf="addNewcommites.get('name')?.getError('minlength')">
+                  name Is minlength 3
+                </p>
+
+                <p *ngIf="addNewcommites.get('name')?.getError('maxlength')">
+                  name Is maxlength 10
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="steps">
+          <div class="right">
+            <p>الخطوة<span>1</span>من 2</p>
+          </div>
+          <button (click)="addcomments()"  routerLink="/members" [disabled]="addNewcommites.invalid" type="submit"
+            class="py-2 px-5 button-2 text-wihte mt-2 rounded-1 border-0">
+            <a class="text-decoration-none">التالي</a>
+          </button>
+        </div>
+      </form>
+    </section>
+  </div>
+</div>

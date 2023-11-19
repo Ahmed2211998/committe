@@ -1,0 +1,16 @@
+@import "../../main.scss";
+.search-result{
+   
+
+    form{
+        box-shadow: 0 5px 8px 3px $text-grey;
+        background-color: $white-color;
+        border-radius: 5px;
+        button,input{
+            border: none;
+            outline: none;
+            background-color: $white-color;
+            padding: 0 8px; 
+        }
+    }
+}

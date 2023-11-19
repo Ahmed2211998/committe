@@ -1,0 +1,60 @@
+<!-- <p>tasks works!</p> -->
+<section class="tasks py-5 pe-4">
+    <div class="container-fluid">
+        <div class="header d-flex align-items-center justify-content-between">
+
+            <div class="col-md-3 d-flex justify-content-start">
+                <div class="title me-5 mt-1">
+                    <h5 class="">لجنة فتح المظاريف 2023</h5>
+                </div>
+            </div>
+
+            <div class="col-md-9 d-flex justify-content-end">
+                <div class="tabs ms-1 ">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link " routerLinkActive="active-tab" aria-current="page"
+                                routerLink="comite-data">بيانات اللجنة</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLinkActive="active-tab" routerLink="tasks">المهام</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLinkActive="active-tab" routerLink="comite-members">الاعضاء</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLinkActive="" routerLink="">الاجتماعات</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLinkActive="" routerLink="">التصويتات</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLinkActive="" routerLink="">التوصيات</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLinkActive="" routerLink="">القرارات</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLinkActive="" routerLink="">المكتبة</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLinkActive="" routerLink="">المحادثات</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                <a class="nav-link" routerLink="">الملاحظات</a>
+            </li> -->
+
+
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+
+        <router-outlet></router-outlet>
+
+    </div>
+</section>
+<!-- <app-comite-members></app-comite-members>
+  <app-comite-data></app-comite-data> -->

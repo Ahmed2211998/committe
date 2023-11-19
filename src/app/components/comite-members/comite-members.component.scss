@@ -1,0 +1,23 @@
+@import "../../main.scss";
+.comite-members{
+    position: relative;
+    margin-right: -25px;
+    .button{
+        position: absolute;
+        left: 10%;
+    }
+    table td img{
+        width: 22px;
+        border: 1px solid $white-color;
+    }
+    
+}
+.btn-1{
+    background-color: $purpul-color;
+
+    color: $white-color !important;
+         
+} 
+.dropdown-toggle::after  {
+    border-color: transparent !important;
+}

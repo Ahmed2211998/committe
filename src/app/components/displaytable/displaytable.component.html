@@ -1,0 +1,179 @@
+<!-- <p>displaytable works!</p> -->
+<!-- <div class="modal"id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+      <div class="modal-dialog  ">
+        <div class="modal-content popup-1">
+            <section class="">
+                  <h1 class="modal-title text-white fs-5" id="exampleModalLabel">اضافة عضو جديد</h1>
+                  <button type="button" class="close btn-close m-auto ms-0"
+                   data-bs-dismiss="modal" aria-label="Close"></button>
+                   <form [formGroup]="addNewitems" (ngSubmit)="onSubmititems()">
+                    <div class="form bg-white mt-3 p-3">
+                      <div class="row g-2">
+                        <div class="check-box col-md">
+                          <label class=""> تصنيف العضو</label>
+                          <div class="d-flex">
+                              <div class="check-input  border-tertiary border-1 border rounded-1 pt-1 ps-1">
+                                <span class="ps-5">عضو داخلي</span>
+                                  <input class="form-check-input mb-1 p-2"
+                                   type="radio" placeholder="عضو داخلي"
+                                    name="flexRadioDefault" id="flexRadioDefault1"
+                                    value="عضو داخلي"
+                                    for="Internalmember"
+                          formControlName="Internalmember">
+                              </div>
+                              <div class="check-input  border-tertiary border-1 border rounded-1 pt-1 me-2  ">
+                                <span class="ps-5">عضو خارجى</span>
+                                <input class="form-check-input mb-1 p-2" type="radio" placeholder="عضو داخلي" 
+                                name="flexRadioDefault" id="flexRadioDefault1"
+                                value="عضو خارجي"
+                                for="Externalmember"
+                                formControlName="Externalmember"
+                                >
+                              </div>
+                          </div>
+                          
+                        </div>
+                        <div class="name col-md w-50 my-2">
+                          <label class="" for=""> اسم العضو</label>
+                          <input type="text" class="form-control mt-2"
+                           placeholder="اسم العضو" aria-label="City"
+                           for="namemember"
+                           formControlName="namemember">
+                           <div *ngIf="
+                           addNewitems.get('namemember')?.touched && addNewitems.get('namemember')?.errors
+                           "
+                            class="alert alert-danger" role="alert">
+                                 <p *ngIf="addNewitems.get('namemember')?.getError('required')" >
+                                  namemember Is required </p>
+               
+                                 <p *ngIf="addNewitems.get('namemember')?.getError('minlength')">
+                                  namemember Is minlength 3 </p>
+               
+                                 <p *ngIf="addNewitems.get('namemember')?.getError('maxlength')">
+                                  namemember Is maxlength 10</p>
+               
+                               </div>
+                        </div>
+                      </div>
+                       
+                        <div class="row g-2 my-2 ">
+                          <div class="col-md mt-3">
+                            <label class="mb-2"  >الدور في اللجنة</label>
+                            <select class="form-select" aria-label="Default select example" 
+                            for="Roleinthecommittee"
+                          formControlName="Roleinthecommittee">
+                            <option selected>عضو</option>
+                            <option value="مسؤل">مسؤل</option>
+                            <option value="مساعد مسؤول">مساعد مسؤول</option>
+                          </select>
+                          <div *ngIf="
+                          addNewitems.get('Roleinthecommittee')?.touched && addNewitems.get('Roleinthecommittee')?.errors
+                          "
+                           class="alert alert-danger" role="alert">
+                                <p *ngIf="addNewitems.get('Roleinthecommittee')?.getError('required')" >
+                                  Roleinthecommittee Is required </p>
+              
+                                <p *ngIf="addNewitems.get('Roleinthecommittee')?.getError('minlength')">
+                                  Roleinthecommittee Is minlength 3 </p>
+              
+                                <p *ngIf="addNewitems.get('Roleinthecommittee')?.getError('maxlength')">
+                                  Roleinthecommittee Is maxlength 10</p>
+              
+                              </div>
+                          </div>
+                            
+                            <div class="col-md">
+                              <div class="my-2">
+                                <label for="formGroupExampleInput" class="form-label"> ملف السيرة الذاتيه</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput"
+                                 placeholder=" يمكنك رفع ملف PDF, CSV,WORD"
+                                 for="memberCV"
+                                 formControlName="memberCV">
+                                 <div *ngIf="
+                                 addNewitems.get('memberCV')?.touched && addNewitems.get('memberCV')?.errors
+                                 "
+                                  class="alert alert-danger" role="alert">
+                                       <p *ngIf="addNewitems.get('memberCV')?.getError('required')" >
+                                         memberCV Is required </p>
+                     
+                                       <p *ngIf="addNewitems.get('memberCV')?.getError('minlength')">
+                                         memberCV Is minlength 3 </p>
+                     
+                                       <p *ngIf="addNewitems.get('memberCV')?.getError('maxlength')">
+                                         memberCV Is maxlength 10</p>
+                     
+                                     </div>
+                
+                              </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                          <div class="check-box col-md">
+                          <label class=""> مقابل مالي</label>
+                          <div class="d-flex">
+                              <div class="check-input d-flex  border-tertiary border-1 border rounded-1 pt-1 ps-1">
+                                <span class="ps-5 ms-5">يوجد</span>
+                                  <input class="form-check-input mb-1" type="radio" 
+                                  placeholder="عضو داخلي" name="flexRadioDefault12" id="flexRadioDefault12"
+                                  for="Thereismoney" value="يوجد"
+                                    formControlName="Thereismoney">
+                                    <div *ngIf="
+                                    addNewitems.get('Thereismoney')?.touched && addNewitems.get('Thereismoney')?.errors
+                                    "
+                                     class="alert alert-danger" role="alert">
+                                          <p *ngIf="addNewitems.get('Thereismoney')?.getError('required')" >
+                                            Thereismoney Is required </p>
+                        
+                                          <p *ngIf="addNewitems.get('Thereismoney')?.getError('minlength')">
+                                            Thereismoney Is minlength 3 </p>
+                        
+                                          <p *ngIf="addNewitems.get('Thereismoney')?.getError('maxlength')">
+                                            Thereismoney Is maxlength 10</p>
+                        
+                                        </div>
+                              </div>
+                              <div class="check-input  border-tertiary border-1 border rounded-1 pt-1 me-2 ">
+                                <span class="ps-5 ms-5"> لا يوجد</span>
+                                <input class="form-check-input mb-1" type="radio" 
+                                placeholder="عضو داخلي" value="لا يوجد"
+                                name="flexRadioDefault12" id="flexRadioDefault12"
+                                for="ThereisNomoney"
+                                formControlName="ThereisNomoney">
+                                <div *ngIf="
+                                addNewitems.get('ThereisNomoney')?.touched && addNewitems.get('ThereisNomoney')?.errors
+                                "
+                                 class="alert alert-danger" role="alert">
+                                      <p *ngIf="addNewitems.get('ThereisNomoney')?.getError('required')" >
+                                        ThereisNomoney Is required </p>
+                    
+                                      <p *ngIf="addNewitems.get('ThereisNomoney')?.getError('minlength')">
+                                        ThereisNomoney Is minlength 3 </p>
+                    
+                                      <p *ngIf="addNewitems.get('ThereisNomoney')?.getError('maxlength')">
+                                        ThereisNomoney Is maxlength 10</p>
+                    
+                                    </div>
+                              </div>
+                          </div>
+                          
+                        </div>
+                        </div>
+                        
+                        
+                    </div>
+                    <footer class=" bg-white mt-3 p-2">
+                        <button type="submit" class="btn btn-1 mt-2 rounded-1" [disabled]="addNewitems.invalid">
+                          <a class=" text-decoration-none text-white">اضافه العضو </a>
+                        </button>
+                        <button class="btn-2 btn bg-white me-2 mt-2 rounded-1">
+                          <a class=" text-decoration-none  border-tertiary"> اعادة الترتيب</a>
+                        </button>
+                    </footer>
+                   </form>
+                 
+              </section>
+        </div>
+       
+      </div>
+    </div> -->

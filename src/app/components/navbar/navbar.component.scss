@@ -1,0 +1,115 @@
+@import "../../main.scss";
+
+.sidenav{
+    background-color: $dark-blue;
+    transition: all .5s ease;
+    position: fixed;
+    z-index: 1;
+    top:0;
+   
+    height: 100vh;
+    transition: all .5s ease;
+    .logo-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 15px 15px ;
+        width: 100%;
+        .logo-text{
+            margin-right: 30px;
+            font-size: 24px;
+            font-weight: 700;
+            color: $white-color;
+        }
+    }
+}
+.collapse{
+    transition: all .5s ease;
+}
+.sidenav-open{
+    width: 70px;
+    transition: all .5s ease;
+}
+.text-none a span{
+   display: none;
+}
+.img-move{
+    margin-right: -100px;
+    transition: all .5s ease;
+}
+
+.sidenav-nav{
+    list-style: none;
+    padding: 15px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    display: block;
+    height: calc(100% - 60px);
+    cursor: pointer;
+    transition: all .3s ease;
+    .sidenav-nav-item{
+        width: 100%;
+        margin-bottom: 10px;
+        .sidenav-nav-link{
+            display: flex;
+            align-items: center;
+            // flex-direction: column;
+            height: 50px;
+            color: #f3f3f3;
+            transition: all .3s ease;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .sidenav-link-icon{
+            text-align: center;
+            width: 20px;
+            margin-right: 10px;
+            
+            
+        }
+        .sidenav-link-text{
+            margin-right: 20px;
+        }
+    }
+    .sidenav-nav-item:hover{
+        .sidenav-nav-link{
+            background-color: $purpul-color;  
+        }
+    }
+}
+.add-new{
+    padding-right: 110px;
+    transition: all .5s ease;
+   
+}
+.body-right{
+    margin-right: 110px;
+   }
+// @media screen and (max-width:768px){
+    
+//     .add-new{
+//         .img{
+//             width:400px;
+//             svg{
+//                 width: 100%;
+//             }
+//         }
+//     }
+    
+
+// }
+// @media screen and (max-width:576px){
+   
+//     .add-new{
+//         .img{
+//             width:300px;
+//             svg{
+//                 width: 100%;
+//             }
+//         }
+//     }
+    
+
+// }
+

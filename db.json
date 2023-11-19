@@ -1,0 +1,175 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "addcomments": [
+    {
+      "id": 2,
+      "Scopeofthecommittee": "نطاقات",
+      "Theadministrationconcerned": "mmmmmmmmmmmm,",
+      "City": "kufyuy",
+      "datastart": 1321,
+      "dataend": 8888888,
+      "Typeofcommittee": "محلية",
+      "Generalpurposeofthecommittee": "lhlhj",
+      "numbercommittee": 320,
+      "name": "Ahmed"
+    },
+    {
+      "id": 5,
+      "Scopeofthecommittee": "نطاقات",
+      "Theadministrationconcerned": "ugjk",
+      "City": "kjn",
+      "datastart": 523,
+      "dataend": 52,
+      "Typeofcommittee": "محلية",
+      "Generalpurposeofthecommittee": "41352",
+      "numbercommittee": 512,
+      "name": "uhjkn"
+    },
+    {
+      "id": 6,
+      "Scopeofthecommittee": "دولية",
+      "Theadministrationconcerned": "kllm",
+      "City": "hbbj",
+      "datastart": 5632,
+      "dataend": 56,
+      "Typeofcommittee": "محلية",
+      "Generalpurposeofthecommittee": "hv54",
+      "numbercommittee": 4121,
+      "name": "623"
+    },
+    {
+      "id": 7,
+      "Scopeofthecommittee": "نطاقات",
+      "Theadministrationconcerned": ";,l,l;l;",
+      "City": "l;kjiik",
+      "datastart": 652,
+      "dataend": 632,
+      "Typeofcommittee": "محلية",
+      "Generalpurposeofthecommittee": "ujuhj",
+      "numbercommittee": 656312,
+      "name": "yhjn"
+    },
+    {
+      "id": 8,
+      "Scopeofthecommittee": "نطاقات",
+      "Theadministrationconcerned": "اتاللا",
+      "City": "تىة",
+      "datastart": 52,
+      "dataend": 512,
+      "Typeofcommittee": "محلية",
+      "Generalpurposeofthecommittee": "عاتى",
+      "numbercommittee": 8652,
+      "name": "عغاتى"
+    }
+  ],
+  "users": [
+    {
+      "id": 28,
+      "status": "عضو داخلي",
+      "namemember": "Akrem",
+      "Roleinthecommittee": "عضو",
+      "email": "",
+      "phoneNumber": "",
+      "memberCV": "dsd",
+      "Thereismoney": "لا يوجد"
+    },
+    {
+      "id": 31,
+      "status": "عضو داخلي",
+      "namemember": "salah",
+      "Roleinthecommittee": "مسؤل",
+      "email": "",
+      "phoneNumber": "",
+      "memberCV": "ana",
+      "Thereismoney": "يوجد"
+    },
+    {
+      "id": 33,
+      "status": "عضو داخلي",
+      "namemember": "jkjx",
+      "Roleinthecommittee": "مسؤل",
+      "email": "",
+      "phoneNumber": "",
+      "memberCV": "iuh;iu",
+      "Thereismoney": "لا يوجد"
+    },
+    {
+      "id": 34,
+      "status": "عضو خارجي",
+      "namemember": "jnk",
+      "Roleinthecommittee": "مسؤل",
+      "email": "",
+      "phoneNumber": "",
+      "memberCV": "lui",
+      "Thereismoney": "يوجد"
+    },
+    {
+      "id": 35,
+      "status": "عضو خارجي",
+      "namemember": "ddd",
+      "Roleinthecommittee": "مسؤل",
+      "email": "",
+      "phoneNumber": "",
+      "memberCV": "dddd",
+      "Thereismoney": "لا يوجد"
+    },
+    {
+      "id": 36,
+      "status": "عضو داخلي",
+      "namemember": "hhhh",
+      "Roleinthecommittee": "عضو",
+      "email": "",
+      "phoneNumber": "",
+      "memberCV": "jkjj",
+      "Thereismoney": "يوجد"
+    },
+    {
+      "id": 37,
+      "status": "عضو خارجي",
+      "namemember": "kkk",
+      "Roleinthecommittee": "مساعد مسؤول",
+      "email": "",
+      "phoneNumber": "",
+      "memberCV": "kkkkk",
+      "Thereismoney": "يوجد"
+    }
+  ],
+  "df": [
+    {
+      "Scopeofthecommittee": "نطاقات",
+      "Theadministrationconcerned": "454",
+      "City": "kkjk",
+      "datastart": 5,
+      "dataend": 45,
+      "Typeofcommittee": "محلية",
+      "Generalpurposeofthecommittee": "kjkj",
+      "numbercommittee": 145,
+      "name": "45m",
+      "id": 1,
+      "rowmumbers": [
+        {
+          "Scopeofthecommittee": "نطاقات",
+          "Theadministrationconcerned": "sdf"
+        }
+      ]
+    },
+    {
+      "Scopeofthecommittee": "نطاقات",
+      "Theadministrationconcerned": "sdf",
+      "City": "dsf",
+      "datastart": 4553,
+      "dataend": 656,
+      "Typeofcommittee": "محلية",
+      "Generalpurposeofthecommittee": "fdzgz",
+      "numbercommittee": 145,
+      "name": "zdfz",
+      "id": 2
+    }
+  ]
+}

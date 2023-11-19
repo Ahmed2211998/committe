@@ -1,0 +1,84 @@
+<!-- <p>navbar works!</p> -->
+<section>
+      <!-- side-nav-bar -->
+  <div class="sidenav" [ngClass]="open ? 'sidenav-open text-none': '' ">
+      <div class="logo-container">
+          
+          <div role="button" class="logo-text me-1"(click)=" toggleOpen()" >
+              
+              <img src="./assets/sidenavicon/bar.svg" alt="">
+          </div>
+          
+       </div>
+       <ul class="sidenav-nav">
+          <li class="sidenav-nav-item" *ngFor="let data of navData">
+              <a href="" class="sidenav-nav-link" [routerLink]="data.routerLink">
+                  <img [src]="data.icon" alt="" class="sidenav-link-icon">
+                  <span class="sidenav-link-text ">{{data.label}}</span>
+              </a>
+          </li>
+      </ul>
+  </div>  
+  <!-- top-nav-bar -->
+  <nav class="navbar navbar-expand-lg bg-white" [ngClass]="open ? ' ': 'add-new' ">
+  <div class="container-fluid">
+  
+      <div class="collapse navbar-collapse pe-5" id="navbarSupportedContent">
+          <ul class="navbar-nav  mb-2 mb-lg-0  ms-auto">
+              <li class="nav-item dropdown">
+                 
+                  <a class="nav-link dropdown-toggle fw-bold fs-5 text-black" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img
+                      src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                      class="rounded-circle me-3"
+                      height="25"
+                      alt="Black and White Portrait of a Man"
+                      loading="lazy"
+                      />
+                      محمد الراجحي
+  
+                  <!-- img user -->
+                  </a>
+                  <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#"></a></li>
+                  <li><a class="dropdown-item" href="#"> </a></li>
+                  <li><hr class="dropdown-divider"><img src="./assets/navtopicon/icon-3" alt=""></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+              </li>
+              <!-- icon -->
+          <li class="nav-item">
+              <a class="nav-link active" aria-current="page"><img src="./assets/navtopicon/icon-1.svg" alt=""></a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link"><img src="./assets/navtopicon/icon-2.svg" alt=""></a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link " ><img src="./assets/navtopicon/icon-3.svg" alt=""></a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link " ><img src="./assets/navtopicon/icon-4.svg" alt=""></a>
+          </li>
+          
+          </ul>
+      
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      <a class="navbar-brand m-3 me-5 pe-5 mt-lg-0 " href="#">
+          <img
+              src="./assets/navtopicon/logo.png"
+              height="50"
+              alt=" Logo"
+              loading="lazy"
+          />
+      </a>
+    </div>
+  </nav>
+  </section>
+  <div class="" [ngClass]="open ? ' ': 'add-new' ">
+      <router-outlet></router-outlet>
+  </div>
+  
+  

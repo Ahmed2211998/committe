@@ -1,0 +1,776 @@
+<!-- <p>committees works!</p> -->
+<section class="committees pb-5 pe-5">
+      <div class="container">
+          <div class="search-header d-flex align-items-center justify-content-between">
+              <div class="title  text-end">
+                  <h3 class=" pt-3 ">
+                      اللجان
+                  </h3>
+                  <h6  class="  "> مرحبا مرة اخري <span>اسم العضو</span></h6>
+              </div>
+              <div class="search  d-flex align-items-center justify-content-between">
+                  <form action="" class="py-2 px-3 d-flex align-items-center justify-content-evenly">
+                      <button>
+                          <img src="./assets/search-icon.svg" alt="">
+                      </button>
+                      <input type="search"   class="form-control" aria-label="search" placeholder="ابحث هنا">
+                    
+                      <a class=" ms-auto" href="" data-bs-toggle="modal" data-bs-target="#exampleModal"> 
+                          <img src="./assets/filter-icon.svg" class="" alt="filter">
+                      </a>
+    
+                 
+<!-- search filter -->
+
+<!-- Modal -->
+<div class="modal " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content search-filter">
+        <section class=" ">
+            <h1 class="modal-title fs-5 text-white" id="exampleModalLabel">فلتر البحث</h1>
+            <button type="button" class="btn-close ms-0 me-auto close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="form  bg-white mt-3 p-3 ">
+                
+                <div class="row g-2 my-2 ">
+                    
+                <div class="col-md mt-3">
+                    <label class="mb-2" for="">تصنيف اللجنة</label>
+                    <select class="form-select" aria-label="Default select example">
+                    <option selected>اختر التصنيف</option>
+                    <option value="2"></option>
+                    <option value="3"></option>
+                </select>
+                </div>
+                    
+                <div class="col-md mt-3">
+                    <label class="mb-2" for=""> نوع اللجنة</label>
+                    <select class="form-select" aria-label="Default select example">
+                    <option selected>اختر نوع اللجنة</option>
+                    <option value="2"></option>
+                    <option value="3"> </option>
+                </select>
+                </div>
+                    
+                </div> 
+                
+                <div class="row g-2 my-2 ">
+                
+                <div class="col-md mt-3">
+                    <label class="mb-2" for="">حالة اللجنة</label>
+                    <select class="form-select" aria-label="Default select example">
+                    <option selected>اختر الحالة</option>
+                    <option value="2"></option>
+                    <option value="3"></option>
+                </select>
+                </div>
+                    
+                <div class="col-md mt-3">
+                    <label class="mb-2" for="">تاريخ التشكيل</label>
+                    <select class="form-select" aria-label="Default select example">
+                    <option selected>اكتب تاريخ التشكيل</option>
+                    <option value="2"></option>
+                    <option value="3"></option>
+                </select>
+                </div>
+                    
+                </div>
+                
+            </div>
+            <footer class=" bg-white mt-3 p-2">
+                <button class="btn btn-1 mt-2 rounded-1 px-5 ">
+                    <a class=" text-decoration-none text-white"> تصفيه </a>
+                </button>
+            </footer>
+        </section>
+    </div>
+    </div>
+</div>
+<!-- end modal filter -->
+                     
+                  </form>
+                  <button class="py-2 px-3 button-2 me-2 border-0">
+                      <a class="text-decoration-none " routerLink="/form">اضافة لجنة جديدة+</a>
+                  </button>
+   
+              </div>
+          </div>
+          <div class="comite-content">
+              <div class="row g-3">
+                  <div *ngFor="let commite of commitList " class="col-md-4 col-sm">
+                      <div class="comite-info p-3 rounded-2 shadow">
+                          <div class="title d-flex align-items-center justify-content-between">
+                              <span class="fs-6 bg-light rounded-2 p-1 text-success fw-bold">لجنة نشطة</span>
+                              <div class="dropdown btn">
+                                  <a class="dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      <img src="./assets/dots.svg"  alt="setting">
+                                  </a>
+                                  <ul class="dropdown-menu ">
+                                  <li (click)="editcommite(commite, false)"><a class="dropdown-item" href=""  data-bs-toggle="modal" data-bs-target="#deletecomitte">
+                                      حذف
+                                      <img src="./assets/delet.svg" alt="">
+                                  </a></li>
+                                  <hr>
+                                  <li (click)="editcommite(commite,false)">
+                                    <a class="dropdown-item" href=""
+                                      data-bs-toggle="modal"
+                                       data-bs-target="#updatecomitte">
+                                       تعديل
+                                       <img src="./assets/edit.svg" alt="">
+                                      </a></li>
+                                  </ul>
+                                  
+                              </div>
+                          </div>
+                          <div class="description mt-2">
+                              <h6>لجنة مشروع الحدود القطرية الجديدة لعام 2023 الي 2024 
+                                {{commite.Theadministrationconcerned}}
+
+                              </h6>
+                              <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.إذا كنت تحتا...
+                                {{commite.City}}
+                              </p>
+                          </div>
+                          <div class="info mt-2 d-flex align-items-center justify-content-between">
+                              <div class="date">
+                                  <h6>تاريخ الانشاء</h6>
+                                  <span class="fw-bold">
+                                    {{commite.datastart}}
+                                    5/10/2023</span>
+                              </div>
+                              <div class="num">
+                                  <h6>عدد الاعضاء</h6>
+                                  <span class="fw-bold">23</span>
+                              </div>
+                              <div class="tasks">
+                                  <h6>عدد المهام</h6>
+                                  <span class="fw-bold">لا يوجد مهمام</span>
+                              </div>
+                          </div>
+                          <div class="boss mt-2">
+                              <span>رئيس اللجنة</span>
+                              <div class="boss-info d-flex align-items-center ">
+                                  <img class="rounded-circle ms-1" src="./assets/realtor-1.jpeg"  alt="">
+                                  <span class="fw-bold">عبد الله الراجحي</span>
+                              </div>
+                          </div>
+                          <div class="members mt-2">
+                              <span>الاعضاء</span>
+                              <div class="mems pe-2">
+
+                                  <img class="rounded-circle ms-1" src="./assets/realtor-1.jpeg"  alt="">
+                                  <img class="rounded-circle ms-1" src="./assets/realtor-1.jpeg"  alt="">
+                                  <img class="rounded-circle ms-1" src="./assets/realtor-1.jpeg"  alt="">
+                                  <img class="rounded-circle ms-1" src="./assets/realtor-1.jpeg"  alt="">
+                                  <img class="rounded-circle ms-1" src="./assets/realtor-1.jpeg"  alt="">
+                                  <span>+15</span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-4 col-sm">
+                      <div class="comite-info p-3 rounded-2 shadow">
+                          <div class="title d-flex align-items-center justify-content-between">
+                              <span class="fs-6 bg-light rounded-2 p-1 text-success fw-bold">لجنة نشطة</span>
+                              <div class="dropdown btn">
+                                  <a class="dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      <img src="./assets/dots.svg"  alt="setting">
+                                  </a>
+                                  <ul class="dropdown-menu ">
+                                  <li><a class="dropdown-item" href=""  data-bs-toggle="modal" data-bs-target="#exampleModal-2">
+                                      حذف
+                                      <img src="./assets/delet.svg" alt="">
+                                  </a></li>
+                                  <hr>
+                                  <li><a class="dropdown-item" href=""  data-bs-toggle="modal" data-bs-target="#exampleModal-3">
+                                       تعديل
+                                       <img src="./assets/edit.svg" alt="">
+                                      </a></li>
+                                  </ul>
+                                  
+                              </div>
+                          </div>
+                          <div class="description mt-2">
+                              <h6>لجنة مشروع الحدود القطرية الجديدة لعام 2023 الي 2024</h6>
+                              <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.إذا كنت تحتا...</p>
+                          </div>
+                          <div class="info mt-2 d-flex align-items-center justify-content-between">
+                              <div class="date">
+                                  <h6>تاريخ الانشاء</h6>
+                                  <span class="fw-bold">5/10/2023</span>
+                              </div>
+                              <div class="num">
+                                  <h6>عدد الاعضاء</h6>
+                                  <span class="fw-bold">23</span>
+                              </div>
+                              <div class="tasks">
+                                  <h6>عدد المهام</h6>
+                                  <span class="fw-bold">لا يوجد مهمام</span>
+                              </div>
+                          </div>
+                          <div class="boss mt-2">
+                              <span>رئيس اللجنة</span>
+                              <div class="boss-info d-flex align-items-center ">
+                                  <img class="rounded-circle ms-1" src="./assets/realtor-1.jpeg"  alt="">
+                                  <span class="fw-bold">عبد الله الراجحي</span>
+                              </div>
+                          </div>
+                          <div class="members mt-2">
+                              <span>الاعضاء</span>
+                              <div class="mems pe-2">
+                                  <img class="rounded-circle ms-1" src="./assets/realtor-1.jpeg"  alt="">
+                                  <img class="rounded-circle ms-1" src="./assets/realtor-1.jpeg"  alt="">
+                                  <img class="rounded-circle ms-1" src="./assets/realtor-1.jpeg"  alt="">
+                                  <img class="rounded-circle ms-1" src="./assets/realtor-1.jpeg"  alt="">
+                                  <img class="rounded-circle ms-1" src="./assets/realtor-1.jpeg"  alt="">
+                                  <span>+15</span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-4 col-sm">
+                      <div class="comite-info p-3 rounded-2 shadow">
+                          <div class="title d-flex align-items-center justify-content-between">
+                              <span class="fs-6 bg-light rounded-2 p-1 text-success fw-bold">لجنة نشطة</span>
+                              <div class="dropdown btn">
+                                  <a class="dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      <img src="./assets/dots.svg"  alt="setting">
+                                  </a>
+                                  <ul class="dropdown-menu ">
+                                  <li><a class="dropdown-item" href=""  data-bs-toggle="modal" data-bs-target="#exampleModal-2">
+                                      حذف
+                                      <img src="./assets/delet.svg" alt="">
+                                  </a></li>
+                                  <hr>
+                                  <li><a class="dropdown-item" href=""  data-bs-toggle="modal" data-bs-target="#exampleModal-3">
+                                       تعديل
+                                       <img src="./assets/edit.svg" alt="">
+                                      </a></li>
+                                  </ul>
+                                  
+                              </div>
+                          </div>
+                          <div class="description mt-2">
+                              <h6>لجنة مشروع الحدود القطرية الجديدة لعام 2023 الي 2024</h6>
+                              <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.إذا كنت تحتا...</p>
+                          </div>
+                          <div class="info mt-2 d-flex align-items-center justify-content-between">
+                              <div class="date">
+                                  <h6>تاريخ الانشاء</h6>
+                                  <span class="fw-bold">5/10/2023</span>
+                              </div>
+                              <div class="num">
+                                  <h6>عدد الاعضاء</h6>
+                                  <span class="fw-bold">23</span>
+                              </div>
+                              <div class="tasks">
+                                  <h6>عدد المهام</h6>
+                                  <span class="fw-bold">لا يوجد مهمام</span>
+                              </div>
+                          </div>
+                          <div class="boss mt-2">
+                              <span>رئيس اللجنة</span>
+                              <div class="boss-info d-flex align-items-center ">
+                                  <img class="rounded-circle ms-1" src="./assets/realtor-1.jpeg"  alt="">
+                                  <span class="fw-bold">عبد الله الراجحي</span>
+                              </div>
+                          </div>
+                          <div class="members mt-2">
+                              <span>الاعضاء</span>
+                              <div class="mems pe-2">
+                                  <img class="rounded-circle ms-1" src="./assets/realtor-1.jpeg"  alt="">
+                                  <img class="rounded-circle ms-1" src="./assets/realtor-1.jpeg"  alt="">
+                                  <img class="rounded-circle ms-1" src="./assets/realtor-1.jpeg"  alt="">
+                                  <img class="rounded-circle ms-1" src="./assets/realtor-1.jpeg"  alt="">
+                                  <img class="rounded-circle ms-1" src="./assets/realtor-1.jpeg"  alt="">
+                                  <span>+15</span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-4 col-sm">
+                      <div class="comite-info p-3 rounded-2 shadow">
+                          <div class="title d-flex align-items-center justify-content-between">
+                              <span class="fs-6 bg-light rounded-2 p-1 text-success fw-bold">لجنة نشطة</span>
+                              <div class="dropdown btn">
+                                  <a class="dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      <img src="./assets/dots.svg"  alt="setting">
+                                  </a>
+                                  <ul class="dropdown-menu ">
+                                  <li><a class="dropdown-item" href=""  data-bs-toggle="modal" data-bs-target="#exampleModal-2">
+                                      حذف
+                                      <img src="./assets/delet.svg" alt="">
+                                  </a></li>
+                                  <hr>
+                                  <li><a class="dropdown-item" href=""  data-bs-toggle="modal" data-bs-target="#exampleModal-3">
+                                       تعديل
+                                       <img src="./assets/edit.svg" alt="">
+                                      </a></li>
+                                  </ul>
+                                  
+                              </div>
+                          </div>
+                          <div class="description mt-2">
+                              <h6>لجنة مشروع الحدود القطرية الجديدة لعام 2023 الي 2024</h6>
+                              <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.إذا كنت تحتا...</p>
+                          </div>
+                          <div class="info mt-2 d-flex align-items-center justify-content-between">
+                              <div class="date">
+                                  <h6>تاريخ الانشاء</h6>
+                                  <span class="fw-bold">5/10/2023</span>
+                              </div>
+                              <div class="num">
+                                  <h6>عدد الاعضاء</h6>
+                                  <span class="fw-bold">23</span>
+                              </div>
+                              <div class="tasks">
+                                  <h6>عدد المهام</h6>
+                                  <span class="fw-bold">لا يوجد مهمام</span>
+                              </div>
+                          </div>
+                          <div class="boss mt-2">
+                              <span>رئيس اللجنة</span>
+                              <div class="boss-info d-flex align-items-center ">
+                                  <img class="rounded-circle ms-1" src="./assets/realtor-1.jpeg"  alt="">
+                                  <span class="fw-bold">عبد الله الراجحي</span>
+                              </div>
+                          </div>
+                          <div class="members mt-2">
+                              <span>الاعضاء</span>
+                              <div class="mems pe-2">
+                                  <img class="rounded-circle ms-1" src="./assets/realtor-1.jpeg"  alt="">
+                                  <img class="rounded-circle ms-1" src="./assets/realtor-1.jpeg"  alt="">
+                                  <img class="rounded-circle ms-1" src="./assets/realtor-1.jpeg"  alt="">
+                                  <img class="rounded-circle ms-1" src="./assets/realtor-1.jpeg"  alt="">
+                                  <img class="rounded-circle ms-1" src="./assets/realtor-1.jpeg"  alt="">
+                                  <span>+15</span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-4 col-sm">
+                      <div class="comite-info p-3 rounded-2 shadow">
+                          <div class="title d-flex align-items-center justify-content-between">
+                              <span class="fs-6 bg-light rounded-2 p-1 text-success fw-bold">لجنة نشطة</span>
+                              <div class="dropdown btn">
+                                  <a class="dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      <img src="./assets/dots.svg"  alt="setting">
+                                  </a>
+                                  <ul class="dropdown-menu ">
+                                  <li><a class="dropdown-item" href=""  data-bs-toggle="modal" data-bs-target="#exampleModal-2">
+                                      حذف
+                                      <img src="./assets/delet.svg" alt="">
+                                  </a></li>
+                                  <hr>
+                                  <li><a class="dropdown-item" href=""  data-bs-toggle="modal" data-bs-target="#exampleModal-3">
+                                       تعديل
+                                       <img src="./assets/edit.svg" alt="">
+                                      </a></li>
+                                  </ul>
+                                  
+                              </div>
+                          </div>
+                          <div class="description mt-2">
+                              <h6>لجنة مشروع الحدود القطرية الجديدة لعام 2023 الي 2024</h6>
+                              <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.إذا كنت تحتا...</p>
+                          </div>
+                          <div class="info mt-2 d-flex align-items-center justify-content-between">
+                              <div class="date">
+                                  <h6>تاريخ الانشاء</h6>
+                                  <span class="fw-bold">5/10/2023</span>
+                              </div>
+                              <div class="num">
+                                  <h6>عدد الاعضاء</h6>
+                                  <span class="fw-bold">23</span>
+                              </div>
+                              <div class="tasks">
+                                  <h6>عدد المهام</h6>
+                                  <span class="fw-bold">لا يوجد مهمام</span>
+                              </div>
+                          </div>
+                          <div class="boss mt-2">
+                              <span>رئيس اللجنة</span>
+                              <div class="boss-info d-flex align-items-center ">
+                                  <img class="rounded-circle ms-1" src="./assets/realtor-1.jpeg"  alt="">
+                                  <span class="fw-bold">عبد الله الراجحي</span>
+                              </div>
+                          </div>
+                          <div class="members mt-2">
+                              <span>الاعضاء</span>
+                              <div class="mems pe-2">
+                                  <img class="rounded-circle ms-1" src="./assets/realtor-1.jpeg"  alt="">
+                                  <img class="rounded-circle ms-1" src="./assets/realtor-1.jpeg"  alt="">
+                                  <img class="rounded-circle ms-1" src="./assets/realtor-1.jpeg"  alt="">
+                                  <img class="rounded-circle ms-1" src="./assets/realtor-1.jpeg"  alt="">
+                                  <img class="rounded-circle ms-1" src="./assets/realtor-1.jpeg"  alt="">
+                                  <span>+15</span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-4 col-sm">
+                      <div class="comite-info p-3 rounded-2 shadow">
+                          <div class="title d-flex align-items-center justify-content-between">
+                              <span class="fs-6 bg-light rounded-2 p-1 text-success fw-bold">لجنة نشطة</span>
+                              <div class="dropdown btn">
+                                  <a class="dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      <img src="./assets/dots.svg"  alt="setting">
+                                  </a>
+                                  <ul class="dropdown-menu ">
+                                  <li><a class="dropdown-item" href=""  data-bs-toggle="modal" data-bs-target="#exampleModal-2">
+                                      حذف
+                                      <img src="./assets/delet.svg" alt="">
+                                  </a></li>
+                                  <hr>
+                                  <li><a class="dropdown-item" href=""  data-bs-toggle="modal" data-bs-target="#exampleModal-3">
+                                       تعديل
+                                       <img src="./assets/edit.svg" alt="">
+                                      </a></li>
+                                  </ul>
+                                  
+                              </div>
+  
+                          </div>
+                          <div class="description mt-2">
+                              <h6>لجنة مشروع الحدود القطرية الجديدة لعام 2023 الي 2024</h6>
+                              <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.إذا كنت تحتا...</p>
+                          </div>
+                          <div class="info mt-2 d-flex align-items-center justify-content-between">
+                              <div class="date">
+                                  <h6>تاريخ الانشاء</h6>
+                                  <span class="fw-bold">5/10/2023</span>
+                              </div>
+                              <div class="num">
+                                  <h6>عدد الاعضاء</h6>
+                                  <span class="fw-bold">23</span>
+                              </div>
+                              <div class="tasks">
+                                  <h6>عدد المهام</h6>
+                                  <span class="fw-bold">لا يوجد مهمام</span>
+                              </div>
+                          </div>
+                          <div class="boss mt-2">
+                              <span>رئيس اللجنة</span>
+                              <div class="boss-info d-flex align-items-center ">
+                                  <img class="rounded-circle ms-1" src="./assets/realtor-1.jpeg"  alt="">
+                                  <span class="fw-bold">عبد الله الراجحي</span>
+                              </div>
+                          </div>
+                          <div class="members mt-2">
+                              <span>الاعضاء</span>
+                              <div class="mems pe-2">
+                                  <img class="rounded-circle ms-1" src="./assets/realtor-1.jpeg"  alt="">
+                                  <img class="rounded-circle ms-1" src="./assets/realtor-1.jpeg"  alt="">
+                                  <img class="rounded-circle ms-1" src="./assets/realtor-1.jpeg"  alt="">
+                                  <img class="rounded-circle ms-1" src="./assets/realtor-1.jpeg"  alt="">
+                                  <img class="rounded-circle ms-1" src="./assets/realtor-1.jpeg"  alt="">
+                                  <span>+15</span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+      
+              </div>
+          </div>
+      </div>
+  
+  </section>
+  
+  
+  <!-- -- modal delet comite  -->
+<div class="modal-2 modal " id="deletecomitte" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content delete">
+            <section>
+                <h1 class="modal-title fs-5 text-white" id="exampleModalLabel"> حذف اللجنة</h1>
+                <button type="button" class="btn-close close ms-0 me-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="delete-img bg-white mt-3 p-3 pb-5 text-center py-5 my-5">
+                    <img  src="./assets/exit.png"  alt="">
+                    <p class="text-center text-danger fw-bold mt-2">هل انت متاكد من حذف اللحنة</p>
+                </div> 
+            
+                <footer class=" bg-white mt-1 p-2">
+                    <button (click)="deleteCommittes()" class=" p-2 me-3 mt-2 bg-danger rounded-1  border-0" data-bs-dismiss="modal" aria-label="Close">
+                        <a class=" text-decoration-none text-white "> تاكيد الحذف</a>
+                    </button>
+                    <button class="btn btn-1 me-2 rounded-1">
+                        <a class=" text-decoration-none text-white">الغاء</a>
+                    </button>
+                   
+                </footer>
+            </section>
+        </div>
+    </div>
+</div>
+
+
+<!-- تعديل اللجنة -->
+
+<div class="modal-3 modal " id="updatecomitte" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content h-100 update">
+        <div class="">
+            <h1 class="modal-title fs-5 text-white" id="exampleModalLabel"> تعديل حالة اللجنة </h1>
+            <button type="button" class="btn-close ms-0 me-auto close" 
+            data-bs-dismiss="modal" aria-label="Close"></button>
+            <form [formGroup]="addNewcommites">
+  <div class="form bg-white p-2">
+
+
+            <div class="row g-2 my-1 ">
+                <div class="col-md">
+                    <div class="my-1">
+                        <label for="numbercommittee">رقم الاقرار</label>
+              <input type="number" class="form-control" placeholder="اكتب هنا ..." 
+              formControlName="numbercommittee"
+                aria-label="First name" />
+              <div *ngIf="
+                  addNewcommites.get('numbercommittee')?.touched &&
+                  addNewcommites.get('numbercommittee')?.errors
+                " class="alert alert-danger" role="alert">
+                <p *ngIf="
+                    addNewcommites.get('numbercommittee')?.getError('required')
+                  ">
+                  numbercommittee Is required
+                </p>
+
+                <p *ngIf="
+                    addNewcommites.get('numbercommittee')?.getError('minlength')
+                  ">
+                  numbercommittee Is minlength 3
+                </p>
+
+                <p *ngIf="
+                    addNewcommites.get('numbercommittee')?.getError('maxlength')
+                  ">
+                  numbercommittee Is maxlength 10
+                </p>
+              </div>
+                    </div>
+                </div>
+                <div class="col-md mt-1">
+                    <label for="Typeofcommittee">نوع اللجنة</label>
+                    <select class="form-select" aria-label="Default select example" formControlName="Typeofcommittee"
+                      placeholder="اكتب هنا ...">
+                      <option selected>محلية</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                    <div *ngIf="
+                        addNewcommites.get('Typeofcommittee')?.touched &&
+                        addNewcommites.get('Typeofcommittee')?.errors
+                      " class="alert alert-danger" role="alert">
+                      <p *ngIf="
+                          addNewcommites.get('Typeofcommittee')?.getError('required')
+                        ">
+                        Typeofcommittee Is required
+                      </p>
+      
+                      <p *ngIf="
+                          addNewcommites.get('Typeofcommittee')?.getError('minlength')
+                        ">
+                        Typeofcommittee Is minlength 3
+                      </p>
+      
+                      <p *ngIf="
+                          addNewcommites.get('Typeofcommittee')?.getError('maxlength')
+                        ">
+                        Typeofcommittee Is maxlength 10
+                      </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-2 my-1 ">
+                <div class="col-md">
+                    <div class="my-1">
+                        <label for="namecommittee"> اسم اللجنة</label>
+                        <input type="text" class="form-control" placeholder="اكتب هنا ..." formControlName="name"
+                          aria-label="Last name" />
+                        <div *ngIf="
+                            addNewcommites.get('name')?.touched &&
+                            addNewcommites.get('name')?.errors
+                          " class="alert alert-danger" role="alert">
+                          <p *ngIf="addNewcommites.get('name')?.getError('required')">
+                            name Is required
+                          </p>
+          
+                          <p *ngIf="addNewcommites.get('name')?.getError('minlength')">
+                            name Is minlength 3
+                          </p>
+          
+                          <p *ngIf="addNewcommites.get('name')?.getError('maxlength')">
+                            name Is maxlength 10
+                          </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md mt-1">
+                    <label class="mb-1" for="">حالة اللجنة</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>نشطة</option>
+                        <option value="2"></option>
+                        <option value="3"> </option>
+                    </select>
+                </div>
+            </div>
+            <div class="row g-2 my-1 ">
+                <div class="col-md">
+                    <div class="my-1">
+                        <label for="datastart">تاريخ التشكبل</label>
+                        <input type="number" class="form-control" placeholder="تاريخ التشكبل" aria-label="State"
+                          formControlName="datastart" />
+                        <div *ngIf="
+                            addNewcommites.get('datastart')?.touched &&
+                            addNewcommites.get('datastart')?.errors
+                          " class="alert alert-danger" role="alert">
+                          <p *ngIf="addNewcommites.get('datastart')?.getError('required')">
+                            datastart Is required
+                          </p>
+          
+                          <p *ngIf="addNewcommites.get('datastart')?.getError('minlength')">
+                            datastart Is minlength 3
+                          </p>
+          
+                          <p *ngIf="addNewcommites.get('datastart')?.getError('maxlength')">
+                            datastart Is maxlength 10
+                          </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="my-1">
+                        <label for="Theadministrationconcerned"> الادارة المعنية</label>
+                        <input type="text" class="form-control" placeholder="اكتب هنا ..." aria-label="Last name"
+                          formControlName="Theadministrationconcerned" />
+                        <div *ngIf="
+                            addNewcommites.get('Theadministrationconcerned')?.touched &&
+                            addNewcommites.get('Theadministrationconcerned')?.errors
+                          " class="alert alert-danger" role="alert">
+                          <p *ngIf="
+                              addNewcommites
+                                .get('Theadministrationconcerned')
+                                ?.getError('required')
+                            ">
+                            Theadministrationconcerned Is required
+                          </p>
+          
+                          <p *ngIf="
+                              addNewcommites
+                                .get('Theadministrationconcerned')
+                                ?.getError('minlength')
+                            ">
+                            Theadministrationconcerned Is minlength 3
+                          </p>
+          
+                          <p *ngIf="
+                              addNewcommites
+                                .get('Theadministrationconcerned')
+                                ?.getError('maxlength')
+                            ">
+                            Theadministrationconcerned Is maxlength 10
+                          </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row g-2 my-1 ">
+                <div class="col-md">
+                    <div class="my-1">
+                        <label for="dataend"> تاريخ الانتهاء</label>
+              <input type="number" class="form-control" placeholder=" تاريخ الانتهاء" formControlName="dataend"
+                aria-label="Zip" />
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="my-1">
+                        <label for="City">تصنيف اللجنة</label>
+              <input type="text" class="form-control" placeholder="اكتب هنا..." aria-label="City"
+                formControlName="City" />
+              <div *ngIf="
+                  addNewcommites.get('City')?.touched &&
+                  addNewcommites.get('City')?.errors
+                " class="alert alert-danger" role="alert">
+                <p *ngIf="addNewcommites.get('City')?.getError('required')">
+                  City Is required
+                </p>
+
+                <p *ngIf="addNewcommites.get('City')?.getError('minlength')">
+                  City Is minlength 3
+                </p>
+
+                <p *ngIf="addNewcommites.get('City')?.getError('maxlength')">
+                  City Is maxlength 10
+                </p>
+              </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row g-3 my-1">
+                <div class=" col-md">
+                <label class="" for="">الموضوع</label>
+                <input type="text" class="form-control mt-2" placeholder=" اكتب موضوع اللجنة" aria-label="City">
+                </div>
+                <div class="col-md">
+                <div class="cv">
+                    <label for="formGroupExampleInput" class="form-label"> ملف السيرة الذاتيه</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder=" يمكنك رفع ملف PDF, CSV,WORD">
+
+                </div>
+                </div>
+            </div>
+            <div class="row g-3">
+                <div class="name col-sm-7 my-3">
+                    <label for="Generalpurposeofthecommittee">الغرض العام</label>
+              <input type="text" class="form-control" placeholder="الغرض العام من اللجنة..."
+                formControlName="Generalpurposeofthecommittee" aria-label="Last name" />
+              <div *ngIf="
+                  addNewcommites.get('numbercommittee')?.touched &&
+                  addNewcommites.get('numbercommittee')?.errors
+                " class="alert alert-danger" role="alert">
+                <p *ngIf="
+                    addNewcommites
+                      .get('Generalpurposeofthecommittee')
+                      ?.getError('required')
+                  ">
+                  Generalpurposeofthecommittee Is required
+                </p>
+
+                <p *ngIf="
+                    addNewcommites
+                      .get('Generalpurposeofthecommittee')
+                      ?.getError('minlength')
+                  ">
+                  Generalpurposeofthecommittee Is minlength 3
+                </p>
+
+                <p *ngIf="
+                    addNewcommites
+                      .get('Generalpurposeofthecommittee')
+                      ?.getError('maxlength')
+                  ">
+                  Generalpurposeofthecommittee Is maxlength 10
+                </p>
+              </div>
+
+                </div> 
+            </div>
+            </div> 
+              
+            </form>
+          
+        </div>
+        <footer class=" bg-white mt-1 p-2">
+            <button (click)="updateCommittes()" class="btn btn-1  rounded-1" data-bs-dismiss="modal" aria-label="Close">
+                <a class=" text-decoration-none text-white">حفظ</a>
+            </button>
+            <button (click)="deleteCommittes()" class="bg-white p-1 me-3 mt-2  rounded-1 border border-1  border-danger " 
+            data-bs-dismiss="modal" aria-label="Close">
+                <a class=" text-decoration-none text-danger bg-white"> حذف</a>
+            </button>
+        </footer>
+    </div>
+    </div>
+</div>
+  

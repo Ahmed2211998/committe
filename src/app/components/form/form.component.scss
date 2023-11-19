@@ -1,0 +1,128 @@
+@import "../../main.scss";
+.fillForm{
+    padding-right: 70px;
+    color: $grey-color;
+    background-color: #F6FBFF;
+   position: relative;
+    label{
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    
+   
+    .info{
+        h3{
+            color: $blue-color;
+            font-size: 15px;
+        }
+    }
+    .boxes{
+       display:flex ;
+       align-items: center;
+       justify-content: space-between;
+
+        .right-box,
+        .left-box{
+            background-color: $white-color;
+            border: 1px solid $light-blue;
+            color: $grey-color;
+            font-size: 12px;
+            padding:5px;
+            width: 100px;
+            height: 50px;
+            text-align: center;
+           
+           
+        }
+        .right-box{
+            position: relative;
+        }
+        .right-box::after{
+            content:"";
+            width: 915px;
+            height: 1px;
+            background-color: $text-grey;
+            position: absolute;
+            top:50%;
+            left: -915px;
+
+        }
+      
+        @media screen and (max-width:768px){
+            .right-box,
+            .left-box{
+                font-size: 12px;
+                width: 100px;
+                height: 90px;
+            
+        }
+            .right-box::after{
+                content:"";
+                width: 319px;
+                height: 1px;
+                background-color: $grey-color;
+                position: absolute;
+                top:50%;
+                left: -319px;
+    
+            }
+        }
+        @media screen and (max-width:576px){
+            .right-box,
+            .left-box{
+                font-size: 10px;
+                width: 100px;
+                height: 80px;
+            
+        }
+            .right-box::after{
+                content:"";
+                width: 123px;
+                height: 1px;
+                background-color: $grey-color;
+                position: absolute;
+                top:50%;
+                left: -123px;
+    
+            }
+        }
+
+    }
+    input{
+        padding:5px ;
+        font-size: 12px;
+    }
+    .form-floating{
+        padding:0;
+    }
+    input::placeholder{
+        font-size: 12px;
+        color:$grey-color;
+    }
+    .steps{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $white-color;
+        padding: 5px 30px;
+        border-top: 2px solid $text-grey;
+        width: 100%;
+        position: absolute;
+       right: 0;
+       bottom: -135px;
+        .right{
+            font-size: 16px;
+            color:#000;
+            padding-right: 70px;
+        }
+        
+    }
+ 
+}
+
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
